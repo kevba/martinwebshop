@@ -16,7 +16,7 @@ services:
     depends_on:
       - db
     ports:
-      - "8080:80"
+      - "127.0.0.1:8080:80"
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: wordpress
@@ -24,6 +24,7 @@ services:
       WORDPRESS_DB_NAME: wordpress
     volumes:
       - wp_data:/var/www/html
+      - ./themes/martin-theme:/var/www/html/wp-content/themes/martin-theme
 
   wp-cli:
     image: wordpress:cli
@@ -44,6 +45,7 @@ services:
     volumes:
       - wp_data:/var/www/html
       - ./setup:/setup
+      - ./themes/martin-theme:/var/www/html/wp-content/themes/martin-theme
     entrypoint: /bin/sh
     command: /setup/setup.sh
 
