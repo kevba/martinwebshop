@@ -1,0 +1,246 @@
+/* =========================================================================
+   Geloofstegels – WooCommerce styling (huisstijl)
+   ========================================================================= */
+
+.woocommerce-main { width: 100%; }
+
+/* ----- Breadcrumb ----- */
+.woocommerce-breadcrumb {
+	font-size: 0.85rem;
+	color: var(--gt-grijs);
+	padding: 1.5rem 0 0;
+}
+.woocommerce-breadcrumb .gt-bc-sep { opacity: 0.5; }
+
+/* ----- Notices ----- */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+	border-top-color: var(--gt-blauw);
+	border-radius: var(--gt-radius-klein);
+	background: var(--gt-beige-licht);
+}
+.woocommerce-message::before,
+.woocommerce-info::before { color: var(--gt-blauw); }
+
+/* ----- Productgrid (winkel & categorie) ----- */
+.woocommerce ul.products,
+.gt-product-grid {
+	display: grid !important;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--gt-gap);
+	margin: 0 0 2rem;
+	padding: 0;
+	list-style: none;
+}
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+	width: auto !important;
+	margin: 0 !important;
+	float: none !important;
+	background: var(--gt-wit);
+	border: 1px solid var(--gt-grijs-licht);
+	border-radius: var(--gt-radius);
+	padding: 0.8rem;
+	text-align: center;
+	transition: transform var(--gt-transitie), box-shadow var(--gt-transitie);
+	display: flex;
+	flex-direction: column;
+}
+.woocommerce ul.products li.product:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--gt-schaduw-hover);
+}
+.woocommerce ul.products li.product a img {
+	border-radius: var(--gt-radius-klein);
+	margin-bottom: 0.8rem;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+	font-family: var(--gt-font-kop);
+	font-size: 1.1rem;
+	color: var(--gt-blauw);
+	padding: 0.4rem 0;
+}
+.woocommerce ul.products li.product .price {
+	color: var(--gt-zwart);
+	font-weight: 600;
+	margin-bottom: 0.6rem;
+}
+.woocommerce ul.products li.product .price del { color: var(--gt-grijs); font-weight: 400; }
+.woocommerce ul.products li.product .button { margin-top: auto; }
+.woocommerce span.onsale {
+	background: var(--gt-blauw);
+	border-radius: 999px;
+	min-height: auto;
+	min-width: auto;
+	padding: 0.3rem 0.8rem;
+	font-size: 0.75rem;
+	line-height: 1;
+}
+
+/* Resultaatcount + sortering */
+.woocommerce .woocommerce-result-count { color: var(--gt-grijs); }
+.woocommerce .woocommerce-ordering select {
+	border-radius: 999px;
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--gt-grijs-licht);
+}
+
+/* Categorie-koptekst */
+.woocommerce .term-description { color: var(--gt-grijs); max-width: 720px; }
+.woocommerce-products-header__title.page-title,
+.woocommerce .page-title {
+	font-family: var(--gt-font-kop);
+	color: var(--gt-blauw);
+}
+
+/* ----- Enkel product ----- */
+.single-product div.product {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+}
+.single-product div.product .woocommerce-product-gallery { margin: 0; }
+.single-product div.product .woocommerce-product-gallery img { border-radius: var(--gt-radius); }
+.single-product div.product .product_title {
+	font-family: var(--gt-font-kop);
+	color: var(--gt-blauw);
+	margin-top: 0;
+}
+.single-product div.product p.price,
+.single-product div.product span.price {
+	color: var(--gt-blauw);
+	font-size: 1.6rem;
+	font-weight: 600;
+}
+.single-product .woocommerce-product-details__short-description { color: var(--gt-grijs); }
+.single-product div.product form.cart { margin-top: 1.5rem; }
+.single-product div.product form.cart .quantity input {
+	width: 80px;
+	text-align: center;
+	border-radius: 999px;
+}
+.single-product div.product .single_add_to_cart_button {
+	padding: 0.95rem 2rem;
+}
+
+/* Tabs */
+.woocommerce-tabs { grid-column: 1 / -1; margin-top: 1rem; }
+.woocommerce div.product .woocommerce-tabs ul.tabs { padding: 0; }
+.woocommerce div.product .woocommerce-tabs ul.tabs::before { border-bottom-color: var(--gt-grijs-licht); }
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+	border-radius: var(--gt-radius-klein) var(--gt-radius-klein) 0 0;
+	border-color: var(--gt-grijs-licht);
+	background: var(--gt-beige-licht);
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+	background: var(--gt-wit);
+	border-bottom-color: var(--gt-wit);
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li a { color: var(--gt-blauw); }
+
+/* Gerelateerde / upsell-producten */
+.related.products, .upsells.products { grid-column: 1 / -1; margin-top: 3rem; }
+.related.products > h2, .upsells.products > h2 {
+	font-family: var(--gt-font-kop);
+	color: var(--gt-blauw);
+}
+
+/* ----- Upsell checkbox (Houten houder) ----- */
+.gt-upsell {
+	background: var(--gt-beige);
+	border-radius: var(--gt-radius);
+	padding: 1rem 1.2rem;
+	margin: 1.2rem 0;
+}
+.gt-upsell__label {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.8rem;
+	cursor: pointer;
+	margin: 0;
+}
+.gt-upsell__label input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	margin-top: 0.2rem;
+	accent-color: var(--gt-blauw);
+	flex: 0 0 auto;
+}
+.gt-upsell__text { display: flex; flex-direction: column; line-height: 1.4; }
+.gt-upsell__text strong { color: var(--gt-blauw); }
+.gt-upsell__price { font-weight: 600; color: var(--gt-blauw); }
+.gt-upsell__text small { color: var(--gt-grijs); }
+.gt-cart-note { color: var(--gt-grijs); font-weight: 400; }
+
+/* ----- Winkelmand ----- */
+.woocommerce-cart table.cart,
+.woocommerce table.shop_table {
+	border-radius: var(--gt-radius);
+	border: 1px solid var(--gt-grijs-licht);
+	border-collapse: separate;
+	overflow: hidden;
+}
+.woocommerce table.shop_table th { background: var(--gt-beige-licht); color: var(--gt-blauw); }
+.woocommerce-cart .cart-collaterals .cart_totals h2 { color: var(--gt-blauw); }
+.woocommerce a.remove { color: var(--gt-blauw) !important; }
+.woocommerce a.remove:hover { background: var(--gt-blauw); color: #fff !important; }
+
+/* ----- Checkout (huisstijl) ----- */
+.woocommerce-checkout h3 { color: var(--gt-blauw); font-family: var(--gt-font-kop); }
+.woocommerce-checkout #payment {
+	background: var(--gt-beige-licht);
+	border-radius: var(--gt-radius);
+}
+.woocommerce-checkout #payment ul.payment_methods { border-bottom-color: var(--gt-grijs-licht); }
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea,
+.woocommerce form .form-row select {
+	border-radius: var(--gt-radius-klein);
+	border: 1px solid var(--gt-grijs-licht);
+	padding: 0.7rem 1rem;
+}
+.woocommerce #payment #place_order,
+.woocommerce-checkout #place_order {
+	width: 100%;
+	padding: 1rem;
+	font-size: 1.05rem;
+}
+.woocommerce .woocommerce-checkout-review-order table.shop_table {
+	background: var(--gt-wit);
+}
+.woocommerce-info, .woocommerce-form-coupon-toggle { border-radius: var(--gt-radius-klein); }
+
+/* ----- Account ----- */
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+	list-style: none;
+	padding: 0;
+	background: var(--gt-beige-licht);
+	border-radius: var(--gt-radius);
+	overflow: hidden;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation li a {
+	display: block;
+	padding: 0.8rem 1.2rem;
+	border-bottom: 1px solid var(--gt-grijs-licht);
+}
+.woocommerce-account .woocommerce-MyAccount-navigation li.is-active a { background: var(--gt-blauw); color: #fff; }
+
+/* ----- Winkel-zijbalk filters ----- */
+.shop-sidebar .widget-title { color: var(--gt-blauw); }
+.shop-sidebar ul { list-style: none; padding: 0; }
+.shop-sidebar ul li { padding: 0.3rem 0; }
+
+/* ----- Responsive ----- */
+@media (max-width: 1024px) {
+	.woocommerce ul.products, .gt-product-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+	.single-product div.product { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media (max-width: 720px) {
+	.woocommerce ul.products, .gt-product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+	.woocommerce ul.products, .gt-product-grid { grid-template-columns: 1fr; }
+}

@@ -54,14 +54,8 @@ fi
 # wp plugin install plugin-name --activate
 
 # --- Theme ---
-# Install parent theme (Flavor)
-if ! wp theme is-installed flavor 2>/dev/null; then
-  echo "Installing Flavor parent theme..."
-  wp theme install flavor
-fi
-
-# Activate child theme
-wp theme activate martin-theme
+# Activate geloofstegels theme
+wp theme activate geloofstegels
 
 # --- WooCommerce settings ---
 wp option update woocommerce_currency EUR

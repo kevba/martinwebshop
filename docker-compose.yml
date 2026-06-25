@@ -24,7 +24,7 @@ services:
       WORDPRESS_DB_NAME: wordpress
     volumes:
       - wp_data:/var/www/html
-      - ./themes/martin-theme:/var/www/html/wp-content/themes/martin-theme
+      - ./themes/geloofstegels:/var/www/html/wp-content/themes/geloofstegels
 
   wp-cli:
     image: wordpress:cli
@@ -45,7 +45,7 @@ services:
     volumes:
       - wp_data:/var/www/html
       - ./setup:/setup
-      - ./themes/martin-theme:/var/www/html/wp-content/themes/martin-theme
+      - ./themes/geloofstegels:/var/www/html/wp-content/themes/geloofstegels
     entrypoint: /bin/sh
     command: /setup/setup.sh
 

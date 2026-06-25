@@ -1,0 +1,21 @@
+/*
+Theme Name: Geloofstegels
+Theme URI: https://geloofstegels.nl
+Author: Geloofstegels.nl
+Author URI: https://geloofstegels.nl
+Description: Een volledig maatwerk WordPress + WooCommerce thema voor Geloofstegels.nl. Scandinavisch minimalistisch ontwerp met de huisstijlkleuren donkerblauw (#1E3A6E) en warm beige (#F0E8D8), Playfair Display koppen en een neutrale sans-serif voor broodtekst. Inclusief homepage met 6 secties, dropdown-navigatie, upsell voor de houten houder en een krachtige zoekfunctie op productnaam en bijbeltekst-tags.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: geloofstegels
+Tags: e-commerce, woocommerce, custom-menu, featured-images, full-width-template, translation-ready, block-styles, wide-blocks
+*/
+
+/*
+ * De volledige styling staat in assets/css/main.css en assets/css/woocommerce.css
+ * en wordt via functions.php ingeladen. Dit bestand bevat alleen de verplichte
+ * thema-header die WordPress nodig heeft om het thema te herkennen.
+ */
